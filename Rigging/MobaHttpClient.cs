@@ -80,10 +80,11 @@ public class MobaHttpClient
         payload.Headers.Add("X-Riot-Token", _apiConfig.riotKey);
 
         HttpResponseMessage result = await client.SendAsync(payload);
+
         if (result.IsSuccessStatusCode)
         {
-            string? contents = result.Content.ToString();
-            if (contents != null)
+            string contents = await result.Content.ReadAsStringAsync();
+            if (contents.Length > 0)
             {
                 return JsonConvert.DeserializeObject<AccountDto?>(contents);
             }
@@ -115,8 +116,8 @@ public class MobaHttpClient
         HttpResponseMessage result = await client.SendAsync(payload);
         if (result.IsSuccessStatusCode)
         {
-            string? contents = result.Content.ToString();
-            if (contents != null)
+            string contents = await result.Content.ReadAsStringAsync();
+            if (contents.Length > 0)
             {
                 return JsonConvert.DeserializeObject<ChampionInfoDto?>(contents);
             }
@@ -148,8 +149,8 @@ public class MobaHttpClient
         HttpResponseMessage result = await client.SendAsync(payload);
         if (result.IsSuccessStatusCode)
         {
-            string? contents = result.Content.ToString();
-            if (contents != null)
+            string contents = await result.Content.ReadAsStringAsync();
+            if (contents.Length > 0)
             {
                 return JsonConvert.DeserializeObject<List<ChampionMasteryDto>?>(contents);
             }
@@ -181,8 +182,8 @@ public class MobaHttpClient
         HttpResponseMessage result = await client.SendAsync(payload);
         if (result.IsSuccessStatusCode)
         {
-            string? contents = result.Content.ToString();
-            if (contents != null)
+            string contents = await result.Content.ReadAsStringAsync();
+            if (contents.Length > 0)
             {
                 return JsonConvert.DeserializeObject<ChampionRotationDto?>(contents);
             }
@@ -214,8 +215,8 @@ public class MobaHttpClient
         HttpResponseMessage result = await client.SendAsync(payload);
         if (result.IsSuccessStatusCode)
         {
-            string? contents = result.Content.ToString();
-            if (contents != null)
+            string contents = await result.Content.ReadAsStringAsync();
+            if (contents.Length > 0)
             {
                 return JsonConvert.DeserializeObject<List<LeagueEntryDto>?>(contents);
             }
@@ -247,8 +248,8 @@ public class MobaHttpClient
         HttpResponseMessage result = await client.SendAsync(payload);
         if (result.IsSuccessStatusCode)
         {
-            string? contents = result.Content.ToString();
-            if (contents != null)
+            string contents = await result.Content.ReadAsStringAsync();
+            if (contents.Length > 0)
             {
                 return JsonConvert.DeserializeObject<LeagueListDto?>(contents);
             }
@@ -280,8 +281,8 @@ public class MobaHttpClient
         HttpResponseMessage result = await client.SendAsync(payload);
         if (result.IsSuccessStatusCode)
         {
-            string? contents = result.Content.ToString();
-            if (contents != null)
+            string contents = await result.Content.ReadAsStringAsync();
+            if (contents.Length > 0)
             {
                 return JsonConvert.DeserializeObject<LeagueListDto?>(contents);
             }
@@ -313,8 +314,8 @@ public class MobaHttpClient
         HttpResponseMessage result = await client.SendAsync(payload);
         if (result.IsSuccessStatusCode)
         {
-            string? contents = result.Content.ToString();
-            if (contents != null)
+            string contents = await result.Content.ReadAsStringAsync();
+            if (contents.Length > 0)
             {
                 return JsonConvert.DeserializeObject<LeagueListDto?>(contents);
             }
@@ -346,8 +347,8 @@ public class MobaHttpClient
         HttpResponseMessage result = await client.SendAsync(payload);
         if (result.IsSuccessStatusCode)
         {
-            string? contents = result.Content.ToString();
-            if (contents != null)
+            string contents = await result.Content.ReadAsStringAsync();
+            if (contents.Length > 0)
             {
                 return JsonConvert.DeserializeObject<PlatformDataDto?>(contents);
             }
@@ -417,8 +418,8 @@ public class MobaHttpClient
         HttpResponseMessage result = await client.SendAsync(payload);
         if (result.IsSuccessStatusCode)
         {
-            string? contents = result.Content.ToString();
-            if (contents != null)
+            string contents = await result.Content.ReadAsStringAsync();
+            if (contents.Length > 0)
             {
                 return JsonConvert.DeserializeObject<MatchesDto?>(contents);
             }
@@ -450,8 +451,8 @@ public class MobaHttpClient
         HttpResponseMessage result = await client.SendAsync(payload);
         if (result.IsSuccessStatusCode)
         {
-            string? contents = result.Content.ToString();
-            if (contents != null)
+            string contents = await result.Content.ReadAsStringAsync();
+            if (contents.Length > 0)
             {
                 return JsonConvert.DeserializeObject<MatchDto?>(contents);
             }
@@ -483,8 +484,8 @@ public class MobaHttpClient
         HttpResponseMessage result = await client.SendAsync(payload);
         if (result.IsSuccessStatusCode)
         {
-            string? contents = result.Content.ToString();
-            if (contents != null)
+            string contents = await result.Content.ReadAsStringAsync();
+            if (contents.Length > 0)
             {
                 return JsonConvert.DeserializeObject<SummonerDto?>(contents);
             }
@@ -516,8 +517,8 @@ public class MobaHttpClient
         HttpResponseMessage result = await client.SendAsync(payload);
         if (result.IsSuccessStatusCode)
         {
-            string? contents = result.Content.ToString();
-            if (contents != null)
+            string contents = await result.Content.ReadAsStringAsync();
+            if (contents.Length > 0)
             {
                 return JsonConvert.DeserializeObject<SummonerDto?>(contents);
             }
@@ -549,8 +550,8 @@ public class MobaHttpClient
         HttpResponseMessage result = await client.SendAsync(payload);
         if (result.IsSuccessStatusCode)
         {
-            string? contents = result.Content.ToString();
-            if (contents != null)
+            string contents = await result.Content.ReadAsStringAsync();
+            if (contents.Length > 0)
             {
                 return JsonConvert.DeserializeObject<SummonerDto?>(contents);
             }
@@ -582,8 +583,8 @@ public class MobaHttpClient
         HttpResponseMessage result = await client.SendAsync(payload);
         if (result.IsSuccessStatusCode)
         {
-            string? contents = result.Content.ToString();
-            if (contents != null)
+            string contents = await result.Content.ReadAsStringAsync();
+            if (contents.Length > 0)
             {
                 return JsonConvert.DeserializeObject<SummonerDto?>(contents);
             }
