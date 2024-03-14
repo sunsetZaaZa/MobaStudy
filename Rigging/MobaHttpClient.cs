@@ -12,7 +12,7 @@ namespace MobaGains.Rigging;
 //Tier: IRON, BRONZE, SILVER, GOLD, PLATINUM, EMERALD, DIAMOND, MASTER, GRANDMASTER, CHALLENGER
 //Division: I, II, III, IV
 
-//Notes: Master, GrandMaster, Challenger only has Division I
+//Notes: Master, GrandMaster, Challenger do not have divisions
 
 //Regions: NA1 : North America 1
 //         LA1 : Latin America 1
@@ -30,8 +30,6 @@ namespace MobaGains.Rigging;
 //         TR1 : Turkey
 //         TW2 : Taiwan
 //         VN2 : Vietnam
-
-//
 
 public interface IMobaHttpClient
 {
@@ -55,9 +53,9 @@ public interface IMobaHttpClient
 public class MobaHttpClient
 {
     private readonly IHttpClientFactory _httpClientFactory;
-    private readonly APIConfig _apiConfig;
+    private readonly UserRiotAPIConfig _apiConfig;
 
-    public MobaHttpClient(IHttpClientFactory httpClientFactory, IOptions<APIConfig> apiConfig)
+    public MobaHttpClient(IHttpClientFactory httpClientFactory, IOptions<UserRiotAPIConfig> apiConfig)
     {
         _httpClientFactory = httpClientFactory;
         _apiConfig = apiConfig.Value;
