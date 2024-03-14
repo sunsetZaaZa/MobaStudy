@@ -1,16 +1,17 @@
-﻿using MobaGains.Rigging.LCU.DataTypes;
-using System.Management.Automation;
+﻿using System.Management.Automation;
 using System.Text.RegularExpressions;
+
+using MobaGains.Rigging.LCU.DataTypes;
 
 namespace MobaGains.Rigging.LCU;
 
 public class RiotConnector
 {
-    private static string PSCommand = "WMIC PROCESS WHERE \"name='LeagueClientUx.exe'\" GET commandline";
     private static string testPattern = "\"--install-directory=(.*?s)\"";
 
-    public Lockfile? AcquireLockFile()
+    public Lockfile? AcquireLockFile(string applicationName)
     {
+        string PSCommand = "WMIC PROCESS WHERE \"name='" + applicationName + "'\" GET commandline";
         string? fullString = null;
         Lockfile? locks = null;
 
