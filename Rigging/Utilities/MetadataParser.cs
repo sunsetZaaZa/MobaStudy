@@ -1,4 +1,5 @@
-﻿using MobaGains.Rigging.Utilities.Metadata;
+﻿using MobaGains.Entities;
+using MobaGains.Rigging.Utilities.Metadata;
 
 namespace MobaGains.Rigging.Utilities;
 
@@ -9,6 +10,8 @@ public interface IMetadataParser
     ChampionStats ExtractChampionStats(string haystack);
     ChampionSummary ExtractChampionSummary(string haystack);
     MapDetails ExtractMapDetails(string haystack);
+
+    Item TransformIntoItem(ItemStats item);
 }
 
 public class MetadataParser : IMetadataParser

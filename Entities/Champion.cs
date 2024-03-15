@@ -1,5 +1,5 @@
 ﻿namespace MobaGains.Entities;
 
-public class Boot
+public class Champion
 {
 }

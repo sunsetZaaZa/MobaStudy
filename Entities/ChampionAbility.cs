@@ -1,5 +1,5 @@
 ﻿namespace MobaGains.Entities;
 
-public class Weapon
+public class ChampionAbility
 {
 }

@@ -2,7 +2,7 @@
 using MobaGains.Rigging.Configs;
 using Npgsql;
 
-namespace MobaGains.Rigging.Database.Database;
+namespace MobaGains.Rigging.Database;
 
 public class DatabaseContext
 {

@@ -3,8 +3,6 @@
 using Npgsql;
 using NpgsqlTypes;
 
-using MobaGains.Rigging.Database.Database;
-
 namespace MobaGains.Rigging.Database.Repos;
 
 public interface IGameplayRepo
