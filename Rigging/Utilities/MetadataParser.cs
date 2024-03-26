@@ -1,4 +1,4 @@
-﻿using MobaGains.Entities;
+﻿using MobaGains.Entities.Metadata;
 using MobaGains.Rigging.Utilities.Metadata;
 
 namespace MobaGains.Rigging.Utilities;

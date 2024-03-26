@@ -2,8 +2,8 @@
 using Microsoft.Net.Http.Headers;
 
 using MobaGains.Rigging.Configs;
-using MobaGains.Rigging.JsonModels;
-using MobaGains.Rigging.JsonModels.Match;
+using MobaGains.Rigging.JsonModels.RiotWebApi;
+using MobaGains.Rigging.JsonModels.RiotWebApi.Match;
 using Newtonsoft.Json;
 
 namespace MobaGains.Rigging;

@@ -1922,6 +1922,19 @@
           }
         }
       },
+      "NewId/4.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/NewId.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/NewId.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
@@ -4972,6 +4985,21 @@
         "runtimes/win/lib/net8.0/Microsoft.WSMan.Runtime.dll"
       ]
     },
+    "NewId/4.0.1": {
+      "sha512": "jegBasNndmG21G3BmT51suFDCIz/sLN81j+IxmkZ4iWoaDi8LygeHiyNnYbXz5OQh9nCRJFIx1+PJrlYi1Gc9Q==",
+      "type": "package",
+      "path": "newid/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/NewId.dll",
+        "lib/net6.0/NewId.xml",
+        "lib/netstandard2.0/NewId.dll",
+        "lib/netstandard2.0/NewId.xml",
+        "newid.4.0.1.nupkg.sha512",
+        "newid.nuspec"
+      ]
+    },
     "Newtonsoft.Json/13.0.3": {
       "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "type": "package",
@@ -7156,6 +7184,7 @@
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 8.0.3",
       "Microsoft.PowerShell.SDK >= 7.4.1",
       "NUnit >= 4.1.0",
+      "NewId >= 4.0.1",
       "Newtonsoft.Json >= 13.0.3",
       "Npgsql >= 8.0.2",
       "SQLite >= 3.13.0",
@@ -7219,6 +7248,10 @@
           "NUnit": {
             "target": "Package",
             "version": "[4.1.0, )"
+          },
+          "NewId": {
+            "target": "Package",
+            "version": "[4.0.1, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",
