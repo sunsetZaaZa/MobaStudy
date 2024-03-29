@@ -34,9 +34,9 @@ namespace MobaGains.Rigging;
 public interface IMobaHttpClient
 {
     Task<AccountDto?> GetAccountInfo(string summonerName, string tagLine, string region);
-    Task<ChampionInfoDto?> GetChampionMasteries(string puuid, string championId, string region);
+    Task<ChampionMasteryDto?> GetChampionMasteries(string puuid, string championId, string region);
     Task<List<ChampionMasteryDto>?> GetAllChampionMasteries(string puuid, string region);
-    Task<ChampionRotationDto?> GetChampionRotation(string region);
+    Task<ChampionInfoDto?> GetChampionRotation(string region);
     Task<List<LeagueEntryDto>?> GetRankByQueueTierDivision(string queue, string tier, string division, string region);
     Task<LeagueListDto?> GetChallengerRankings(string queue, string region);
     Task<LeagueListDto?> GetGrandmasterRankings(string queue, string region);
@@ -95,7 +95,7 @@ public class MobaHttpClient
         return null;
     }
 
-    public async Task<ChampionInfoDto?> GetChampionMasteries(string puuid, string championId, string region)
+    public async Task<ChampionMasteryDto?> GetChampionMasteries(string puuid, string championId, string region)
     {
         string uri = "/lol/champion-mastery/v4/champion-masteries/by-puuid/" + puuid + "/by-champion/" + championId;
         HttpClient client = _httpClientFactory.CreateClient();
@@ -117,7 +117,7 @@ public class MobaHttpClient
             string contents = await result.Content.ReadAsStringAsync();
             if (contents.Length > 0)
             {
-                return JsonConvert.DeserializeObject<ChampionInfoDto?>(contents);
+                return JsonConvert.DeserializeObject<ChampionMasteryDto?>(contents);
             }
         }
         else
@@ -161,7 +161,7 @@ public class MobaHttpClient
         return null;
     }
 
-    public async Task<ChampionRotationDto?> GetChampionRotation(string region)
+    public async Task<ChampionInfoDto?> GetChampionRotation(string region)
     {
         string uri = "/lol/platform/v3/champion-rotations";
         HttpClient client = _httpClientFactory.CreateClient();
@@ -183,7 +183,7 @@ public class MobaHttpClient
             string contents = await result.Content.ReadAsStringAsync();
             if (contents.Length > 0)
             {
-                return JsonConvert.DeserializeObject<ChampionRotationDto?>(contents);
+                return JsonConvert.DeserializeObject<ChampionInfoDto?>(contents);
             }
         }
         else
