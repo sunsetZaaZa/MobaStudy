@@ -1,8 +1,8 @@
 ﻿namespace MobaGains.Rigging.JsonModels.LCU;
 
-public class ValidateRunePage
+public class ValidateRunePageRequest
 {
-    public ValidateRunePage(int id, string name)
+    public ValidateRunePageRequest(int id, string name)
     {
         this.id = id;
         this.name = name;
