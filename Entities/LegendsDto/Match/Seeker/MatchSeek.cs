@@ -1,6 +1,6 @@
-﻿using MobaGains.Entities.LegendsDto.Enums;
+﻿using System.Diagnostics.CodeAnalysis;
 
-using System.Diagnostics.CodeAnalysis;
+using MobaGains.Entities.LegendsDto.Enums;
 
 namespace MobaGains.Entities.LegendsDto.Match.Seeker;
 

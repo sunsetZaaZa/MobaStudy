@@ -3,16 +3,27 @@
 using Npgsql;
 using NpgsqlTypes;
 
+using MobaGains.Entities.Gameplay;
+
 namespace MobaGains.Rigging.Database.Repos;
 
 public interface IGameplayRepo
 {
-    public Task<RuneSet?> GetRuneSet(Guid runeSetId);
+    public Task<List<RuneSet>> ViewRuneSetRange(int index, int length);
+    public Task<RuneSet?> GetRuneSet(Guid indexer);
     public Task<bool> SetRuneSet(RuneSet bundle);
-    public Task<RuneSet?> ModifyRuneset(RuneSet bundle);
-
-    public Task<SummonerSpells?> GetSummonerSpells(Guid summonerSpellId);
-    public Task<bool> SetSummonerSpells(SummonerSpellSet bundle);
+    public Task<List<Playstyle>> ViewPlayStyleRange(int index, int length);
+    public Task<bool> CreatePlayStyle(Playstyle payload);
+    public Task<bool> RemovePlayStyle(Guid indexer);
+    public Task<List<GearLayout>> ViewGearLayoutRange(int index, int length);
+    public Task<List<GearLayout>> ViewGearLayoutByChampion(int championId, int index, int length);
+    public Task<bool> CreateGearLayout(GearLayout payload);
+    public Task<bool> RemoveGearLayout(Guid indexer);
+    public Task<List<TailoredLoadout>> ViewTailoredLoadoutRange(int index, int length, bool? wip, bool? active);
+    public Task<List<TailoredLoadout>> ViewTailoredLoadoutByChampion(int championId, int index, int length, bool? wip, bool? active);
+    public Task<bool> CreateTailoredLoadout(TailoredLoadout payload);
+    public Task<bool> ModifyTailoredLoadout(TailoredLoadout payload);
+    public Task<bool> RemoveTailoredLoadout(Guid indexer);
 }
 
 public class GameplayRepo : IGameplayRepo
@@ -101,18 +112,4 @@ public class GameplayRepo : IGameplayRepo
         return result;
     }
 
-    public async Task<RuneSet?> ModifyRuneset(RuneSet bundle)
-    {
-
-    }
-
-    public async Task<SummonerSpells?> GetSummonerSpells(Guid summonerSpellId)
-    {
-
-    }
-
-    public async Task<bool> SetSummonerSpells(SummonerSpellSet bundle)
-    {
-
-    }
 }

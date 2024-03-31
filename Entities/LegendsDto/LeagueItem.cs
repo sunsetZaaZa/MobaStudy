@@ -4,6 +4,26 @@ namespace MobaGains.Entities.LegendsDto;
 
 public class LeagueItem
 {
+    public LeagueItem(Guid leagueGuid, string summonerId, bool freshBlood, int wins, string summonerName,
+                        int minilosses, string miniProgress, int miniTarget, int miniWins, bool inactive,
+                        bool veteran, bool hotStreak, string rank, int leaguePoints, int losses)
+    {
+        this.leagueGuid = leagueGuid;
+        this.summonerId = summonerId;
+        this.freshBlood = freshBlood;
+        this.wins = wins;
+        this.summonerName = summonerName;
+        this.minilosses = minilosses;
+        this.miniProgress = miniProgress;
+        this.miniTarget = miniTarget;
+        this.miniWins = miniWins;
+        this.inactive = inactive;
+        this.veteran = veteran;
+        this.hotStreak = hotStreak;
+        this.rank = rank;
+        this.leaguePoints = leaguePoints;
+        this.losses = losses;
+    }
 
     public Guid leagueGuid { get; set; } //Foreign Key of LeagueList & Primary Key to LeagueItem
     public string summonerId { get; set; } // Primary Key to LeagueItem
