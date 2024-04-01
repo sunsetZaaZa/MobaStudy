@@ -7,7 +7,7 @@ namespace MobaGains.Rigging.Database.Repos;
 
 public interface IGameMetadataRepo
 {
-
+    
 }
 
 public class GameMetadataRepo

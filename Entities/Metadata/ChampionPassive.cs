@@ -2,6 +2,7 @@
 
 namespace MobaGains.Entities.Metadata;
 
+//TODO: look into Champion Passive define pattern(s)
 public class ChampionPassive
 {
     public ChampionPassive(string championId, string name, string description, List<Tuple<ChampPassive, string>> ability)
@@ -15,5 +16,5 @@ public class ChampionPassive
     public string championId { get; set; }
     public string name { get; set; }
     public string description { get; set; }
-    public List<Tuple<ChampPassive, string>> ability { get; set; } //name, stat
+    public List<string> ability { get; set; } //name, stat
 }
