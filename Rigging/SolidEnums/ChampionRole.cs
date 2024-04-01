@@ -30,28 +30,28 @@ public class ChampionRole : StaticEnumeration
         new List<ChampionRole>() { TANK, FIGHTER, MAGE, MARKSMAN, SUPPORT, WARDEN, VANGUARD, JUGGERNAUT, CONTROLLER,
                                     SKIRMISHER, DIVER, SLAYER, BURST, BATTLEMAGE, ENCHANTER, CATCHER, ASSASSIN, SPECIALIST, ARTILLERY };
 
-    public static readonly int Count = byIndex.Count;
+    public static readonly int Count = byIndex.Count();
 }
 
 public enum ChampionRoleIndexer
 {
-    TANK = 1,
-    FIGHTER = 2,
-    MAGE = 3,
-    MARKSMAN = 4,
-    SUPPORT = 5,
-    WARDEN = 6,
-    VANGUARD = 7,
-    JUGGERNAUT = 8,
-    CONTROLLER = 9,
-    SKIRMISHER = 10,
-    DIVER = 11,
-    SLAYER = 12,
-    BURST = 13,
-    BATTLEMAGE = 14,
-    ENCHANTER = 15,
-    CATCHER = 16,
-    ASSASSIN = 17,
-    SPECIALIST = 18,
-    ARTILLERY = 19,
+    TANK = 0,
+    FIGHTER = 1,
+    MAGE = 2,
+    MARKSMAN = 3,
+    SUPPORT = 4,
+    WARDEN = 5,
+    VANGUARD = 6,
+    JUGGERNAUT = 7,
+    CONTROLLER = 8,
+    SKIRMISHER = 9,
+    DIVER = 10,
+    SLAYER = 11,
+    BURST = 12,
+    BATTLEMAGE = 13,
+    ENCHANTER = 14,
+    CATCHER = 15,
+    ASSASSIN = 16,
+    SPECIALIST = 17,
+    ARTILLERY = 18,
 }

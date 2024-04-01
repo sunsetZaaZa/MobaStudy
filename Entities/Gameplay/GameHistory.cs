@@ -1,4 +1,4 @@
-﻿using MobaGains.Entities.LegendsDto.Enums;
+﻿using MobaGains.Rigging.SolidEnums;
 
 namespace MobaGains.Entities.Gameplay;
 

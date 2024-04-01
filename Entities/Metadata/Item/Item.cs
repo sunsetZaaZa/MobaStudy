@@ -1,7 +1,7 @@
 ﻿using MobaGains.Rigging.Enum;
 using MobaGains.Rigging.SolidEnums;
 
-namespace MobaGains.Entities.Metadata;
+namespace MobaGains.Entities.Metadata.Item;
 
 public class Item
 {

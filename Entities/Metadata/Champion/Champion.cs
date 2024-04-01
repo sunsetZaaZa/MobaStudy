@@ -1,6 +1,6 @@
 ﻿using MobaGains.Rigging.SolidEnums;
 
-namespace MobaGains.Entities.Metadata;
+namespace MobaGains.Entities.Metadata.Champion;
 
 public struct AttributeRatings
 {

@@ -14,13 +14,13 @@ public class AbilityEffects : StaticEnumeration
     public static readonly List<AbilityEffects> byIndex =
         new List<AbilityEffects>() { SPELL_AOE, AOE, SPECIAL, PROC};
 
-    public static readonly int Count = byIndex.Count;
+    public static readonly int Count = byIndex.Count();
 }
 
 public enum AbilityEffectsIndexer
 {
-    SPELL_AOE = 1,
-    AREA_OF_EFFECT = 2,
-    SPECIAL = 3,
-    PROC = 4
+    SPELL_AOE = 0,
+    AREA_OF_EFFECT = 1,
+    SPECIAL = 2,
+    PROC = 3
 }

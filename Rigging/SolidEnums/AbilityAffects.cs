@@ -12,11 +12,11 @@ public class AbilityAffects : StaticEnumeration
     public static readonly List<AbilityAffects> byIndex =
         new List<AbilityAffects>() { ENEMIES, SELF };
 
-    public static readonly int Count = byIndex.Count;
+    public static readonly int Count = byIndex.Count();
 }
 
 public enum AbilityAffectIndexer
 {
-    ENEMIES = 1,
-    SELF = 2
+    ENEMIES = 0,
+    SELF = 1
 }

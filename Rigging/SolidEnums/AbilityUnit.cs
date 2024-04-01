@@ -13,7 +13,7 @@ public class AbilityUnit : StaticEnumeration
     public static readonly List<AbilityUnit> byIndex = 
         new List<AbilityUnit>() { FLAT, PERCENT_AP, PERCENT_BONUS_AD };
 
-    public static readonly int Count = byIndex.Count;
+    public static readonly int Count = byIndex.Count();
 }
 
 public enum AbilityUnitIndexer

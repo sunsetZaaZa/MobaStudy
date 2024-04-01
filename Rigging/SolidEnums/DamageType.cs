@@ -16,15 +16,15 @@ public class DamageType : StaticEnumeration
     public static readonly List<DamageType> byIndex =
         new List<DamageType>() { PHYSICAL, MAGIC, TRUE, PURE, MIXED, OTHER };
 
-    public static readonly int Count = byIndex.Count;
+    public static readonly int Count = byIndex.Count();
 }
 
 public enum DamgeTypeIndexer
 {
-    PHYSICAL = 1,
-    MAGIC = 2,
-    TRUE = 3,
-    PURE = 4,
-    MIXED = 5,
-    OTHER = 6
+    PHYSICAL = 0,
+    MAGIC = 1,
+    TRUE = 2,
+    PURE = 3,
+    MIXED = 4,
+    OTHER = 5
 }

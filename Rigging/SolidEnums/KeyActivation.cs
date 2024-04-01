@@ -14,14 +14,14 @@ public class KeyActivation : StaticEnumeration
 
     public static readonly List<KeyActivation> byIndex = new List<KeyActivation>() { Q, W, E, R, P };
 
-    public static int Count = byIndex.Count;
+    public static int Count = byIndex.Count();
 }
 
 public enum KeyActivationIndexer
 {
-    Q = 1,
-    W = 2,
-    E = 3,
-    R = 4,
-    P = 0
+    Q = 0,
+    W = 1,
+    E = 2,
+    R = 3,
+    P = 4
 }

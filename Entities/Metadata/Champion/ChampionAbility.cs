@@ -1,7 +1,6 @@
 ﻿using MobaGains.Rigging.SolidEnums;
-using System.Speech.Recognition;
 
-namespace MobaGains.Entities.Metadata;
+namespace MobaGains.Entities.Metadata.Champion;
 
 public struct AbilityLevels
 {
@@ -37,23 +36,20 @@ public class AbilityEffect
 
 public class ChampionAbility
 {
-    public ChampionAbility(Guid marker, int championId, string name, List<string> description, KeyActivation activateKey, CharacterResource costType,
+    public ChampionAbility(int championId, string name, List<string> description, KeyActivation activateKey, CharacterResource costType,
                             List<int> cost, List<int> cooldown, bool affectedByCooldownReduction, )
     {
-        this.marker = marker;
         this.championId = championId;
         this.name = name;
         this.description = description;
         this.activateKey = activateKey;
         this.costType = costType;
-
     }
 
-    public Guid marker { get; set; }
-    public int championId { get; set; }
+    public int championId { get; set; } //Primary Key
+    public KeyActivation activateKey { get; set; } //Primary Key
     public string name { get; set; }
     public List<string> description { get; set; }
-    public KeyActivation activateKey { get; set; }
     public CharacterResource costType { get; set; }
     public List<int> cost { get; set; }
     public List<int> cooldown { get; set; }

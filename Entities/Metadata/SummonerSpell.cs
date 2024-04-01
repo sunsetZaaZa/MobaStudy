@@ -1,8 +1,11 @@
-﻿namespace MobaGains.Entities.Metadata;
+﻿using MobaGains.Rigging.SolidEnums;
+
+namespace MobaGains.Entities.Metadata;
 
 public class SummonerSpell
 {
-    public SummonerSpell(int id, string name, string description, int summonerLevel, int cooldown, List<string> gameModes, string iconName)
+    public SummonerSpell(int id, string name, string description, int summonerLevel, 
+                            int cooldown, List<GameMode> gameModes, string iconName)
     {
         this.id = id;
         this.name = name;
@@ -18,6 +21,6 @@ public class SummonerSpell
     public string description { get; set; }
     public int summonerLevel { get; set; }
     public int cooldown { get; set; }
-    public List<string> gameModes { get; set; }
+    public List<GameMode> gameModes { get; set; }
     public string iconName { get; set; }
 }

@@ -12,11 +12,11 @@ public class AbilityTargeting : StaticEnumeration
     public static readonly List<AbilityTargeting> byIndex = 
         new List<AbilityTargeting>() { DIRECTION, LOCATION };
 
-    public static readonly int Count = byIndex.Count;
+    public static readonly int Count = byIndex.Count();
 }
 
 public enum AbilityTargetingIndexer
 {
-    DIRECTION = 1,
-    LOCATION = 2,
+    DIRECTION = 0,
+    LOCATION = 1,
 }

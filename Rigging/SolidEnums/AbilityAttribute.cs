@@ -13,12 +13,12 @@ public class AbilityAttribute : StaticEnumeration
     public static readonly List<AbilityAttribute> byIndex =
         new List<AbilityAttribute>() { INCREASED_MINION_DAMAGE, MAGIC_DAMAGE, ADDITIONAL_MAGIC_DAMAGE };
 
-    public static readonly int Count = byIndex.Count;
+    public static readonly int Count = byIndex.Count();
 }
 
 public enum AbilityAttributeIndexer
 {
-    INCREASED_MINION_DAMAGE = 1,
-    MAGIC_DAMAGE = 2,
-    ADDITIONAL_MAGIC_DAMAGE = 3
+    INCREASED_MINION_DAMAGE = 0,
+    MAGIC_DAMAGE = 1,
+    ADDITIONAL_MAGIC_DAMAGE = 2
 }

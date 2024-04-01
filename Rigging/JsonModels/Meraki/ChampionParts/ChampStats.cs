@@ -2,6 +2,41 @@
 
 public class ChampStats
 {
+    public ChampStats(ChampStat health, ChampStat healthRegen, ChampStat mana, ChampStat manaRegen, ChampStat armor, ChampStat magicResistance, ChampStat attackDamage, 
+                        ChampStat movespeed, ChampStat acquisitionRadius, ChampStat selectionRadius, ChampStat pathingRadius, ChampStat gameplayRadius, ChampStat criticalStrikeDamage, 
+                        ChampStat criticalStrikeDamageModifier, ChampStat attackSpeed, ChampStat attackSpeedRatio, ChampStat attackCastTime, ChampStat attackTotalTime, 
+                        ChampStat attackDelayOffset, ChampStat attackRange, ChampStat aramDamageTaken, ChampStat aramDamageDealt, ChampStat aramHealing, ChampStat aramShielding, 
+                        ChampStat urfDamageTaken, ChampStat urfDamageDealt, ChampStat urfHealing, ChampStat urfShielding)
+    {
+        this.health = health;
+        this.healthRegen = healthRegen;
+        this.mana = mana;
+        this.manaRegen = manaRegen;
+        this.armor = armor;
+        this.magicResistance = magicResistance;
+        this.attackDamage = attackDamage;
+        this.movespeed = movespeed;
+        this.acquisitionRadius = acquisitionRadius;
+        this.selectionRadius = selectionRadius;
+        this.pathingRadius = pathingRadius;
+        this.gameplayRadius = gameplayRadius;
+        this.criticalStrikeDamage = criticalStrikeDamage;
+        this.criticalStrikeDamageModifier = criticalStrikeDamageModifier;
+        this.attackSpeed = attackSpeed;
+        this.attackSpeedRatio = attackSpeedRatio;
+        this.attackCastTime = attackCastTime;
+        this.attackTotalTime = attackTotalTime;
+        this.attackDelayOffset = attackDelayOffset;
+        this.attackRange = attackRange;
+        this.aramDamageTaken = aramDamageTaken;
+        this.aramDamageDealt = aramDamageDealt;
+        this.aramHealing = aramHealing;
+        this.aramShielding = aramShielding;
+        this.urfDamageTaken = urfDamageTaken;
+        this.urfDamageDealt = urfDamageDealt;
+        this.urfHealing = urfHealing;
+        this.urfShielding = urfShielding;
+    }
 
     public ChampStat health { get; set; }
     public ChampStat healthRegen { get; set; }

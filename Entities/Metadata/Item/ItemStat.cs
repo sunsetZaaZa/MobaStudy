@@ -1,6 +1,6 @@
 ﻿using MobaGains.Rigging.Enum;
 
-namespace MobaGains.Entities.Metadata;
+namespace MobaGains.Entities.Metadata.Item;
 
 public class ItemStat
 {
