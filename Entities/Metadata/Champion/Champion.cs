@@ -27,24 +27,29 @@ public struct AttributeRatings
 
 public class Champion
 {
-    public Champion(string championId, string name, string title, string fullName, CharacterResource costType, List<ChampionRole> roles, List<ChampionPassive> passives, AttributeRatings attributeRatings)
+    public Champion(string championId, string name, string title, string fullName, CharacterResourceIndexer primaryResource, CharacterResourceIndexer? passiveResource,
+                    List<ChampionRoleIndexer> roles, ChampionPassive passive, AttributeRatings attributeRatings, List<ChampStatMetadata> stats)
     {
         this.championId = championId;
         this.name = name;
         this.title = title;
         this.fullName = fullName;
-        this.costType = costType;
+        this.primaryResource = primaryResource;
+        this.passiveResource = passiveResource;
         this.roles = roles;
-        this.passives = passives;
+        this.passive = passive;
         this.attributeRatings = attributeRatings;
+        this.stats = stats;
     }
 
-    public string championId { get; set; }
+    public string championId { get; set; } //Primary Key
     public string name { get; set; }
     public string title { get; set; }
     public string fullName { get; set; }
-    public CharacterResource costType { get; set; }
-    public List<ChampionRole> roles { get; set; }
-    public List<ChampionPassive> passives { get; set; }
+    public CharacterResourceIndexer primaryResource { get; set; }
+    public CharacterResourceIndexer? passiveResource { get; set; }
+    public List<ChampionRoleIndexer> roles { get; set; }
+    public ChampionPassive passive { get; set; }
     public AttributeRatings attributeRatings { get; set; }
+    public List<ChampStatMetadata> stats { get; set; }
 }

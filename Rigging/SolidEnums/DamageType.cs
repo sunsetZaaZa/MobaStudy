@@ -19,7 +19,7 @@ public class DamageType : StaticEnumeration
     public static readonly int Count = byIndex.Count();
 }
 
-public enum DamgeTypeIndexer
+public enum DamageTypeIndexer
 {
     PHYSICAL = 0,
     MAGIC = 1,
