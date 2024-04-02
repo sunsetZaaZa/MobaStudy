@@ -4,16 +4,16 @@ namespace MobaGains.Entities.Metadata.Champion;
 
 public class ChampionNote
 {
-    public ChampionNote(Guid indexer, int championId, NoteType type, string description)
+    public ChampionNote(int championId, int makeshiftOrder, NoteType type, string description)
     {
-        this.indexer = indexer;
         this.championId = championId;
+        this.makeshiftOrder = makeshiftOrder;
         this.type = type;
         this.description = description;
     }
 
-    public Guid indexer { get; set; }
-    public int championId { get; set; }
+    public int championId { get; set; } //Primary Key
+    public int makeshiftOrder { get; set; } //Primary Key
     public NoteType type { get; set; }
     public string description { get; set; }
 }

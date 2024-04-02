@@ -4,10 +4,8 @@ namespace MobaGains.Entities.Metadata.Champion;
 
 public class ChampStatMetadata
 {
-    public ChampStatMetadata(int indexer, int championId, ChampStatTypeIndexer statType, float flat, float percent, 
-                                float perLevel, float percentPerLevel)
+    public ChampStatMetadata(int championId, ChampStatTypeIndexer statType, float flat, float percent, float perLevel, float percentPerLevel)
     {
-        this.indexer = indexer;
         this.championId = championId;
         this.statType = statType;
         this.flat = flat;
@@ -16,9 +14,8 @@ public class ChampStatMetadata
         this.percentPerLevel = percentPerLevel;
     }
 
-    public int indexer { get; set; } //Primary Key
-    public int championId { get; set; } //Indexed By
-    public ChampStatTypeIndexer statType { get; set; }
+    public int championId { get; set; } //Primary Key
+    public ChampStatTypeIndexer statType { get; set; } //Primary Key
     public float flat { get; set; }
     public float percent { get; set; }
     public float perLevel { get; set; }

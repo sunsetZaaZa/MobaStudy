@@ -1,14 +1,17 @@
-﻿namespace MobaGains.Entities.Metadata.Champion;
+﻿using MobaGains.Rigging.SolidEnums;
+
+namespace MobaGains.Entities.Metadata.Champion;
 
 public class ChampionPassive
 {
-    public ChampionPassive(string name, List<string> effects)
+    public ChampionPassive(string description, List<ChampionAbilityEffect> effects)
     {
-        this.name = name;
+        this.description = description;
         this.effects = effects;
     }
 
-    public string name { get; set; }
-    public List<string> effects { get; set; }
-    public List<Leveling> levels { get; set; }
+    public int championId { get; set; } //Primary Key
+    public KeyActivationIndexer index { get; set; } //Primary Key
+    public string description { get; set; }
+    public List<ChampionAbilityEffect> effects { get; set; }
 }

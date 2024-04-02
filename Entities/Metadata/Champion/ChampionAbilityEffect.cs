@@ -1,8 +1,21 @@
-﻿namespace MobaGains.Entities.Metadata.Champion;
+﻿using MobaGains.Rigging.SolidEnums;
+
+namespace MobaGains.Entities.Metadata.Champion;
 
 public class ChampionAbilityEffect
 {
+    public ChampionAbilityEffect(int championId, KeyActivationIndexer index, int ordering, string description, List<AbilityAttribute> detail)
+    {
+        this.championId = championId;
+        this.index = index;
+        this.ordering = ordering;
+        this.description = description;
+        this.detail = detail;
+    }
+
+    public int championId { get; set; } //Primary Key
+    public KeyActivationIndexer index { get; set; } //Primary Key
+    public int ordering { get; set; } //Primary Key
     public string description { get; set; }
-    public List<string> attributes { get; set; }
-    public List<Leveling> levels { get; set; }
+    public List<AbilityAttribute> detail { get; set; }
 }
