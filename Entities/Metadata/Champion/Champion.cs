@@ -1,4 +1,5 @@
-﻿using MobaGains.Rigging.SolidEnums;
+﻿using Markdig.Helpers;
+using MobaGains.Rigging.SolidEnums;
 
 namespace MobaGains.Entities.Metadata.Champion;
 

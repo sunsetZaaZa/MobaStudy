@@ -1,21 +1,21 @@
-﻿using MobaGains.Rigging.Enum;
-using MobaGains.Rigging.SolidEnums;
+﻿using MobaGains.Rigging.SolidEnums;
 
 namespace MobaGains.Entities.Metadata.Item;
 
 public class Item
 {
-    public Item(int id, string name, bool active, bool inStore, List<int> from, List<int> to, List<ItemRank> ranks, List<ItemAttribute> attributes,
-                string requiredChampion, string requiredAlly, string requiredBuffCurrencyName, int requiredBuffCurrencyCost,
-                int specialRecipeId, bool isEnchantment, int price, int priceTotal, string iconPath, List<ItemStat> stats)
+    public Item(int id, string name, bool active, bool inStore, List<int> buildFrom, List<int> buildTo, List<ItemRankIndexer> ranks, List<ItemRoleIndexer> roles, 
+                    List<ItemAttribute> attributes, string requiredChampion, string requiredAlly, string requiredBuffCurrencyName, int requiredBuffCurrencyCost,
+                    int specialRecipeId, bool isEnchantment, int price, int priceTotal, string iconPath, List<ItemStat> stats)
     {
         this.id = id;
         this.name = name;
         this.active = active;
         this.inStore = inStore;
-        this.from = from;
-        this.to = to;
+        this.buildFrom = buildFrom;
+        this.buildTo = buildTo;
         this.ranks = ranks;
+        this.roles = roles;
         this.attributes = attributes;
         this.requiredChampion = requiredChampion;
         this.requiredAlly = requiredAlly;
@@ -29,14 +29,15 @@ public class Item
         this.stats = stats;
     }
 
-    public int id { get; set; }
+    public int id { get; set; } //Primary Key
     public string name { get; set; }
     public bool active { get; set; }
     public bool inStore { get; set; }
     public List<int> buildFrom { get; set; }
     public List<int> buildTo { get; set; }
-    public List<ItemRank> ranks { get; set; }
-    public List<ItemRole> roles { get; set; }
+    public List<ItemRankIndexer> ranks { get; set; }
+    public List<ItemRoleIndexer> roles { get; set; }
+    public List<ItemAttribute> attributes { get; set; }
     public string requiredChampion { get; set; }
     public string requiredAlly { get; set; }
     public string requiredBuffCurrencyName { get; set; }

@@ -4,20 +4,20 @@ namespace MobaGains.Entities.Metadata.Item;
 
 public class ItemStat
 {
-    public ItemStat(Guid marker, int itemId, float modifyAmount, StatAttribute attribute, ScalingType scaling, ActivationType activateHow)
+    public ItemStat(int itemId, StatAttribute attribute, int patchVersion, float modifyAmount, ScalingType scaling, ActivationType activateHow)
     {
-        this.marker = marker;
         this.itemId = itemId;
-        this.modifyAmount = modifyAmount;
         this.attribute = attribute;
+        this.patchVersion = patchVersion;
+        this.modifyAmount = modifyAmount;
         this.scaling = scaling;
         this.activateHow = activateHow;
     }
 
-    public Guid marker { get; set; }
     public int itemId { get; set; }
-    public float modifyAmount { get; set; }
     public StatAttribute attribute { get; set; }
+    public int patchVersion { get; set; }
+    public float modifyAmount { get; set; }
     public ScalingType scaling { get; set; }
     public ActivationType activateHow { get; set; }
 }

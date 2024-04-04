@@ -27,12 +27,15 @@ public class CharacterResource : StaticEnumeration
     public static readonly CharacterResource SOULUNBOUND = new CharacterResource(19, "Soul Unbound");
     public static readonly CharacterResource BLOODWELL = new CharacterResource(20, "Blood Well");
     public static readonly CharacterResource MANA_PER_SECOND = new CharacterResource(21, "Mana Per Second");
-    public static readonly CharacterResource OTHER = new CharacterResource(22, "Other");
+    public static readonly CharacterResource STARDUST = new CharacterResource(22, "Stardust");
+    public static readonly CharacterResource MOONLIGHT = new CharacterResource(23, "Moonlight");
+    public static readonly CharacterResource FEAST = new CharacterResource(24, "Feast");
+    public static readonly CharacterResource OTHER = new CharacterResource(25, "Other");
 
     public static readonly List<CharacterResource> byIndex =
         new List<CharacterResource>() { NONE,  NOCOST, MANA, HEALTH, ENERGY, ADRENALINE, BLOODTHIRST, RAGE,
                                         FURY, FEROCITY, MAXIMUMHEALTH, CURRENTHEALTH, CHARGE, HEAT, GRIT, FLOW,
-                                        SHIELD, SOULUNBOUND, BLOODWELL, MANA_PER_SECOND, OTHER };
+                                        SHIELD, SOULUNBOUND, BLOODWELL, MANA_PER_SECOND, STARDUST, MOONLIGHT, FEAST, OTHER };
 
     public static readonly int Count = byIndex.Count();
 }
@@ -60,5 +63,8 @@ public enum CharacterResourceIndexer
     SOULUNBOUND = 18,
     BLOODWELL = 19,
     MANA_PER_SECOND = 20,
-    OTHER = 21
+    STARDUST = 21,
+    MOONLIGHT = 22,
+    FEAST = 23,
+    OTHER = 24
 }

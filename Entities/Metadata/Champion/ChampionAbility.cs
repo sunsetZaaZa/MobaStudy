@@ -4,7 +4,7 @@ namespace MobaGains.Entities.Metadata.Champion;
 
 public class ChampionAbility
 {
-    public ChampionAbility(int championId, KeyActivationIndexer activateKey, string name, List<Leveling>? cost, List<Leveling>? cooldown,
+    public ChampionAbility(int championId, KeyActivationIndexer activateKey, int patchVersion, string name, List<Leveling>? cost, List<Leveling>? cooldown,
                             bool? affectedByCooldownReduction, List<AbilityTargetingIndexer> targeting, List<AbilityAffectIndexer> affects, SpellShieldableIndexer spellshieldable,
                             CharacterResourceIndexer primaryResource, DamageTypeIndexer damageType, List<AbilityEffectsIndexer> abilityEffects, ProjectileTypeIndexer projectile,
                             string? onHitEffects, int occurrence, string notes, List<StatSubDetail>? missileSpeed, List<float>? rechargeRate, float? collisionRadius, 
@@ -13,6 +13,7 @@ public class ChampionAbility
     {
         this.championId = championId;
         this.activateKey = activateKey;
+        this.patchVersion = patchVersion;
         this.name = name;
         this.cost = cost;
         this.cooldown = cooldown;
@@ -43,6 +44,7 @@ public class ChampionAbility
 
     public int championId { get; set; } //Primary Key
     public KeyActivationIndexer activateKey { get; set; } //Primary Key
+    public int patchVersion { get; set; }
     public string name { get; set; }
     public List<ChampionAbilityEffect> effects { get; set; }
     public List<Leveling>? cost { get; set; }
