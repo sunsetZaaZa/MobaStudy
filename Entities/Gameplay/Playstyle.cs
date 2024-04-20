@@ -2,12 +2,14 @@
 
 public class Playstyle
 {
-    public Playstyle(Guid indexer, string name)
+    public Playstyle(int indexer, string name, string? subStyle)
     {
         this.indexer = indexer;
         this.name = name;
+        this.subStyle = subStyle;
     }
 
-    public Guid indexer { get; set; }
+    public int indexer { get; set; } //Primary Key
     public string name { get; set; }
+    public string? subStyle { get; set; }
 }

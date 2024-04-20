@@ -18,4 +18,10 @@
     <PackageReference Include="YamlDotNet" Version="15.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Rigging\Database\Repos\LegendsDto\" />
+    <Folder Include="Rigging\Database\Repos\Metadata\" />
+    <Folder Include="Rigging\Database\Repos\Gameplay\" />
+  </ItemGroup>
+
 </Project>
