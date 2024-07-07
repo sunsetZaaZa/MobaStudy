@@ -1,21 +1,38 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TypeScriptTarget>ES6</TypeScriptTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TypeScriptTarget>ES6</TypeScriptTarget>
+  </PropertyGroup>
+
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <PlatformTarget>x64</PlatformTarget>
+    <PublishAot>True</PublishAot>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.3" />
-    <PackageReference Include="Microsoft.PowerShell.SDK" Version="7.4.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0-preview.5.24306.7" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0-preview.5.24306.7" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.0-preview.5.24306.7" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="9.0.0-preview.5.24306.11" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.61.3" />
+    <PackageReference Include="Microsoft.PowerShell.SDK" Version="7.5.0-preview.3" />
     <PackageReference Include="NewId" Version="4.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Npgsql" Version="8.0.2" />
+    <PackageReference Include="NLog" Version="5.3.2" />
+    <PackageReference Include="Npgsql" Version="8.0.3" />
     <PackageReference Include="NUnit" Version="4.1.0" />
     <PackageReference Include="SQLite" Version="3.13.0" />
-    <PackageReference Include="StackExchange.Redis" Version="2.7.33" />
-    <PackageReference Include="YamlDotNet" Version="15.1.2" />
+    <PackageReference Include="StackExchange.Redis" Version="2.8.0" />
+    <PackageReference Include="System.Runtime.Caching" Version="9.0.0-preview.5.24306.7" />
+    <PackageReference Include="System.Text.Json" Version="9.0.0-preview.5.24306.7" />
+    <PackageReference Include="YamlDotNet" Version="15.3.0" />
   </ItemGroup>
 
   <ItemGroup>

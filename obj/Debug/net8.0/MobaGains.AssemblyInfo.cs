@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MobaGains")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5a92c85f1a1cd008cfd7b46fcd66ed8dc965c46")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71dd4ea5c25aad71c98519850f75bc9a7b36fd20")]
 [assembly: System.Reflection.AssemblyProductAttribute("MobaGains")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MobaGains")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

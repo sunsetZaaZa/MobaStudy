@@ -18,4 +18,5 @@ public interface IGameplayModels
 
 public class GameplayModels
 {
+
 }
